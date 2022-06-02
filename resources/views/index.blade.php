@@ -6,13 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
 </head>
 <body>
 
 
-    {{-- <h2>hello</h2> --}}
-    <div id="react"></div>
-
+    <h2>hello</h2>
+    <div id="user"></div>
+    <script src="{{ asset('js/manifest.js') }}"></script>
+    <script src="{{ asset('js/vendor.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

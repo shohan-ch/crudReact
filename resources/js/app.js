@@ -2,4 +2,4 @@ require('./bootstrap');
 
 
 // require("./components/Index")
-require("./components/React")
+require("./components/User")
