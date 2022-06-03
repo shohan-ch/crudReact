@@ -14,7 +14,7 @@ const HomeComponent = () => {
                             <p className="fw-bold"> Welcome User: </p>
                             <div className="d-flex justify-content-center mt-5">
                                 <Link
-                                    to="contact"
+                                    to="register"
                                     className="btn btn-primary me-3"
                                 >
                                     {" "}

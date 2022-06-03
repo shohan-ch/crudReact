@@ -3,15 +3,20 @@ import ReactDOM, { render } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
+import Register from "./pages/Register";
 
 // const Main = () => {
     const root = ReactDOM.createRoot(document.getElementById("root"));
     root.render(
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Home />}></Route>    
+                <Route path="/" element={<Home />}>
+                </Route>    
                 <Route path="contact" element={<Contact />} />  
-            </Routes></BrowserRouter>)
+                <Route path="register" element={<Register />} />  
+
+            </Routes>
+            </BrowserRouter>)
 
     // return (
         // <BrowserRouter>
