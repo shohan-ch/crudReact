@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-export default  ()=> {
+const User =  ()=> {
     return (
         <div className="container mt-5">
             <div className="row justify-content-center">
@@ -14,8 +14,8 @@ export default  ()=> {
         </div>
     );
 }
-// export default User;
+export default User;
 // DOM element
-if (document.getElementById('user')) {
-    ReactDOM.render(<User />, document.getElementById('user'));
+if (document.getElementById('root')) {
+    ReactDOM.render(<User />, document.getElementById('root'));
 }
