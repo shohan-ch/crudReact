@@ -2407,7 +2407,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
   var _useForm = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_1__.useForm)(),
       handleSubmit = _useForm.handleSubmit,
-      register = _useForm.register;
+      register = _useForm.register,
+      errors = _useForm.formState.errors;
 
   var onSubmit = function onSubmit(values) {
     alert(JSON.stringify(values));
@@ -2438,10 +2439,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", _objectSpread(_objectSpread({
                   type: "text",
                   className: "form-control"
-                }, register("name")), {}, {
+                }, register("name", {
+                  required: true
+                })), {}, {
                   id: "name",
                   placeholder: "Name"
-                }))]
+                })), errors.name && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", {
+                  className: "text-danger",
+                  children: "Name is required"
+                })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("label", {

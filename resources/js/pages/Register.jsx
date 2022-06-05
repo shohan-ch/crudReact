@@ -1,7 +1,11 @@
 import { useForm } from "react-hook-form";
 
 export default () => {
-    const { handleSubmit, register } = useForm();
+    const {
+        handleSubmit,
+        register,
+        formState: { errors },
+    } = useForm();
 
     const onSubmit = (values) => {
         alert(JSON.stringify(values));
@@ -22,10 +26,18 @@ export default () => {
                                     <input
                                         type="text"
                                         className="form-control"
-                                        {...register("name")}
+                                        {...register("name", {
+                                            required: true,
+                                        })}
                                         id="name"
                                         placeholder="Name"
                                     />
+
+                                    {errors.name && (
+                                        <span className="text-danger">
+                                            Name is required
+                                        </span>
+                                    )}
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="email">Email</label>
