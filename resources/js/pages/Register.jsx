@@ -1,3 +1,4 @@
+import { Button } from "antd";
 import { useForm } from "react-hook-form";
 
 export default () => {
@@ -60,12 +61,10 @@ export default () => {
                                         placeholder="Phone"
                                     />
                                 </div>
-                                <button
-                                    type="submit"
-                                    className="btn btn-primary mt-3"
-                                >
-                                    Register
-                                </button>
+
+                                <Button type="primary" htmlType="submit">
+                                    Submit
+                                </Button>
                             </form>
                         </div>
                     </div>

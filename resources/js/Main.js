@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
+import 'antd/dist/antd.css';
 
 // const Main = () => {
     const root = ReactDOM.createRoot(document.getElementById("root"));
