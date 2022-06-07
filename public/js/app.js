@@ -4876,6 +4876,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(antd__WEBPACK_IMPORTED_MODULE_2__["default"], {
                 type: "primary",
                 htmlType: "submit",
+                className: "btn btn-danger",
                 children: "Submit"
               })]
             })

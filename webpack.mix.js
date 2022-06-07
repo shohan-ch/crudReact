@@ -25,5 +25,6 @@ const mix = require('laravel-mix');
     .react()
     .extract(["react"])
     .postCss('resources/css/app.css', 'public/css', [
+        require("tailwindcss"),
     ]);
 

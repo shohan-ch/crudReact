@@ -61,8 +61,11 @@ export default () => {
                                         placeholder="Phone"
                                     />
                                 </div>
-
-                                <Button type="primary" htmlType="submit">
+                                <Button
+                                    type="primary"
+                                    htmlType="submit"
+                                    className="btn btn-danger"
+                                >
                                     Submit
                                 </Button>
                             </form>
