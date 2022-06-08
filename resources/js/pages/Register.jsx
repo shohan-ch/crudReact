@@ -14,16 +14,39 @@ export default () => {
     };
     return (
         <>
-            <div className="container">
+            <div className="mx-auto max-w-lg shadow-lg py-8 px-8 rounded-md space-y-2 bg-blue-300 ">
+                <h2 className="text-black text-center font-medium text-2xl">
+                    Registration form
+                </h2>
+
+                <form>
+                    <div>
+                        <input
+                            type="text"
+                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        />
+                    </div>
+                </form>
+            </div>
+
+            <div>
+                <p className="text-indigo-800 mt-9">Name</p>
                 <div className="card">
                     <div className="card-header">
-                        <h2>Please Register here</h2>
+                        <h2 className="text-indigo-200 bg-stone-700">
+                            Please Register here
+                        </h2>
                     </div>
                     <div className="card-body">
                         <div style={style.formDiv}>
                             <form onSubmit={handleSubmit(onSubmit)}>
                                 <div className="form-group">
-                                    <label htmlFor="name">Name</label>
+                                    <label
+                                        htmlFor="name"
+                                        className="text-slate-500"
+                                    >
+                                        Name
+                                    </label>
                                     <input
                                         type="text"
                                         className="form-control"

@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-    <h1 class="text-3xl font-bold underline bg-slate-500">
+    <h1 class="text-3xl font-bold underline bg-slate-700 shadow-lg mx-auto">
         Hello world!
     </h1>
+
 
     <div id="root"></div>
     <script src="{{ asset('js/manifest.js') }}"></script>
