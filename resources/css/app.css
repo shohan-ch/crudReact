@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.my-btn {
+  @apply bg-teal-500 px-3 text-white py-2 hover:text-white hover:bg-slate-900 shadow-lg shadow-cyan-200/5 rounded-md;
+}
