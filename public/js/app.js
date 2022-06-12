@@ -4819,7 +4819,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             children: "Name"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
             type: "text",
-            className: "mt-1 rounded-md focus:border-indigo-500 w-full  border-gray-700 focus:ring-indigo-500 shadow-sm py-1",
+            className: "",
             placeholder: "Name"
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
@@ -4829,8 +4829,28 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             children: "Email"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
             type: "email",
-            className: "mt-1 rounded-md focus:border-indigo-500 border-gray-700 focus:ring-indigo-500 shadow-sm w-full py-1",
+            className: "mt-1",
             placeholder: "Email"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("label", {
+            htmlFor: "gender",
+            className: "block font-medium ",
+            children: "Gender"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("select", {
+            name: "gender",
+            id: "gender",
+            className: "w-full rounded-md py-1 focus:border-indigo-500",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+              value: "",
+              children: "Select"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+              value: "m",
+              children: "Male"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+              value: "f",
+              children: "Female"
+            })]
           })]
         })]
       })]

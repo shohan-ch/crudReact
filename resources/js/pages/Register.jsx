@@ -36,6 +36,21 @@ export default () => {
                             placeholder="Email"
                         />
                     </div>
+
+                    <div>
+                        <label htmlFor="gender" className="block font-medium ">
+                            Gender
+                        </label>
+                        <select
+                            name="gender"
+                            id="gender"
+                            className="w-full rounded-md py-1 focus:border-indigo-500"
+                        >
+                            <option value="">Select</option>
+                            <option value="m">Male</option>
+                            <option value="f">Female</option>
+                        </select>
+                    </div>
                 </form>
             </div>
 
