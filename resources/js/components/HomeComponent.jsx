@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const HomeComponent = () => {
     return (
         <div>
-            <div className="bg-slate-300 mx-auto max-w-2xl px-4 py-3">
+            <div className="bg-slate-300 max-w-2xl px-4 py-3 mx-auto flex justify-center items-center align-middle mt-5">
                 <div className="space-y-2">
                     <h2 className="text-xl text-green-900">Home page </h2>
                     <div className="space-x-3 mt-10">

@@ -5,3 +5,19 @@
 .my-btn {
   @apply bg-teal-500 px-3 text-white py-2 hover:text-white hover:bg-slate-900 shadow-lg shadow-cyan-200/5 rounded-md;
 }
+
+
+@layer base {
+[type='text'],
+[type='email']
+{
+
+  @apply mt-1 rounded-md focus:border-indigo-500 w-full  border-gray-700 focus:ring-indigo-500 shadow-sm py-1
+
+}
+
+
+
+
+
+}

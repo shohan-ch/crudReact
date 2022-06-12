@@ -14,16 +14,26 @@ export default () => {
     };
     return (
         <>
-            <div className="mx-auto max-w-lg shadow-lg py-8 px-8 rounded-md space-y-2 bg-blue-300 ">
+            <div className="mx-auto max-w-lg shadow-lg py-8 px-8 rounded-md space-y-2 ">
                 <h2 className="text-black text-center font-medium text-2xl">
                     Registration form
                 </h2>
 
-                <form>
+                <form className="space-y-3">
                     <div>
+                        <label htmlFor="name" className="block font-medium ">
+                            Name
+                        </label>
+                        <input type="text" className="" placeholder="Name" />
+                    </div>
+                    <div>
+                        <label htmlFor="email" className="block font-medium ">
+                            Email
+                        </label>
                         <input
-                            type="text"
-                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            type="email"
+                            className="mt-1"
+                            placeholder="Email"
                         />
                     </div>
                 </form>
