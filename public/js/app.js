@@ -2283,10 +2283,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var HomeComponent = function HomeComponent() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    className: "flex items-center h-screen justify-center",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "bg-slate-300 max-w-2xl px-4 py-3 mx-auto flex justify-center items-center align-middle mt-5",
+      className: "p-8 rounded-lg space-y-2 shadow-xl bg-sky-300 ",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: "space-y-2",
+        className: "space-y-8",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h2", {
           className: "text-xl text-green-900",
           children: "Home page "
@@ -2307,10 +2308,7 @@ var HomeComponent = function HomeComponent() {
   });
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HomeComponent); // DOM element
-// if (document.getElementById("root")) {
-//     ReactDOM.render(<User />, document.getElementById("root"));
-// }
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HomeComponent);
 
 /***/ }),
 
@@ -2361,7 +2359,6 @@ __webpack_require__.r(__webpack_exports__);
 var Home = function Home() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "container",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components_HomeComponent__WEBPACK_IMPORTED_MODULE_0__["default"], {})
     })
   });

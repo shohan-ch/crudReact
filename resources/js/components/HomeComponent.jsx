@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
 const HomeComponent = () => {
     return (
-        <div>
-            <div className="bg-slate-300 max-w-2xl px-4 py-3 mx-auto flex justify-center items-center align-middle mt-5">
-                <div className="space-y-2">
+        <div className="flex items-center h-screen justify-center">
+            <div className="p-8 rounded-lg space-y-2 shadow-xl bg-sky-300 ">
+                <div className="space-y-8">
                     <h2 className="text-xl text-green-900">Home page </h2>
                     <div className="space-x-3 mt-10">
                         <Link to="register" className="my-btn ">
@@ -23,7 +23,3 @@ const HomeComponent = () => {
     );
 };
 export default HomeComponent;
-// DOM element
-// if (document.getElementById("root")) {
-//     ReactDOM.render(<User />, document.getElementById("root"));
-// }
