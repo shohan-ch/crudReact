@@ -2282,9 +2282,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var HomeComponent = function HomeComponent() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+  var toggleModal = function toggleModal() {
+    document.getElementById("modal").classList.toggle("hidden");
+  };
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
     className: "flex items-center h-screen justify-center",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
       className: "p-8 rounded-lg space-y-2 shadow-xl bg-sky-300 ",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
         className: "space-y-8",
@@ -2304,7 +2308,64 @@ var HomeComponent = function HomeComponent() {
           })]
         })]
       })
-    })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      "class": "flex items-center justify-center h-full",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+        "class": "py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700",
+        onClick: toggleModal,
+        children: "Show Modal"
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      "class": "fixed z-10 overflow-y-auto top-0 w-full left-0 hidden",
+      id: "modal",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        "class": "flex items-center justify-center min-height-100vh pt-4 px-4 pb-20 text-center sm:block sm:p-0",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          "class": "fixed inset-0 transition-opacity",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            "class": "absolute inset-0 bg-gray-900 opacity-75"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+          "class": "hidden sm:inline-block sm:align-middle sm:h-screen",
+          children: "\u200B"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          "class": "inline-block align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full",
+          role: "dialog",
+          "aria-modal": "true",
+          "aria-labelledby": "modal-headline",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            "class": "bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+              children: "Name"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+              type: "text",
+              "class": "w-full bg-gray-100 p-2 mt-2 mb-3"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+              children: "Url"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+              type: "text",
+              "class": "w-full bg-gray-100 p-2 mt-2 mb-3"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            "class": "bg-gray-200 px-4 py-3 text-right",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
+              type: "button",
+              "class": "py-2 px-4 bg-gray-500 text-white rounded hover:bg-gray-700 mr-2",
+              onClick: toggleModal,
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                "class": "fas fa-times"
+              }), " Cancel"]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
+              type: "button",
+              "class": "py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700 mr-2",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                "class": "fas fa-plus"
+              }), " Create"]
+            })]
+          })]
+        })]
+      })
+    })]
   });
 };
 
