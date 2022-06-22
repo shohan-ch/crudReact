@@ -47,12 +47,19 @@ export default () => {
                             </label>
                             <input
                                 type="text"
-                                className=""
+                                {...register("name", {
+                                    required: true,
+                                })}
                                 placeholder="Name"
                                 {...register("name", {
                                     required: true,
                                 })}
                             />
+                            {errors.name && (
+                                <span className="text-indigo-600">
+                                    Name is required
+                                </span>
+                            )}
                         </div>
                         <div>
                             <label
@@ -62,6 +69,9 @@ export default () => {
                                 Email
                             </label>
                             <input
+                                {...register("email", {
+                                    required: true,
+                                })}
                                 type="email"
                                 className="mt-1"
                                 placeholder="Email"
@@ -79,6 +89,12 @@ export default () => {
                                 Gender
                             </label>
                             <select
+<<<<<<< HEAD
+=======
+                                {...register("gender", {
+                                    required: true,
+                                })}
+>>>>>>> 9d27aeececf2ddd222e3af83c13a8ec46355a8e4
                                 id="gender"
                                 className="w-full rounded-md py-1 focus:border-indigo-500"
                                 {...register("gender", {
@@ -105,76 +121,13 @@ export default () => {
                             </span>
                         </div>
                         <button
-                            className="my-btn py-1 bg-red-700"
+                            className="py-1 bg-red-700 my-btn "
                             type="submit"
                         >
                             Register
                         </button>
                     </form>
                 </div>
-
-                {/* <div>
-                    <div className="card">
-                        <div className="card-header"></div>
-                        <div className="card-body">
-                            <div style={style.formDiv}>
-                                <form>
-                                    <div className="form-group">
-                                        <label
-                                            htmlFor="name"
-                                            className="text-slate-500"
-                                        >
-                                            Name
-                                        </label>
-                                        <input
-                                            type="text"
-                                            className="form-control"
-                                            {...register("name", {
-                                                required: true,
-                                            })}
-                                            id="name"
-                                            placeholder="Name"
-                                        />
-
-                                        {errors.name && (
-                                            <span className="text-danger">
-                                                Name is required
-                                            </span>
-                                        )}
-                                    </div>
-                                    <div className="form-group">
-                                        <label htmlFor="email">Email</label>
-                                        <input
-                                            type="text"
-                                            className="form-control"
-                                            {...register("email")}
-                                            id="name"
-                                            placeholder="Email"
-                                        />
-                                    </div>
-
-                                    <div className="form-group">
-                                        <label htmlFor="phone">Phone</label>
-                                        <input
-                                            type="text"
-                                            className="form-control"
-                                            {...register("phone")}
-                                            id="name"
-                                            placeholder="Phone"
-                                        />
-                                    </div>
-                                    <Button
-                                        type="primary"
-                                        htmlType="submit"
-                                        className="btn btn-danger"
-                                    >
-                                        Submit
-                                    </Button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
             </div>
         </>
     );
