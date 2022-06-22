@@ -1,7 +1,18 @@
 import { Button } from "antd";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
+import AuthenticateServiceApi from "../api/AuthenticateServiceApi";
+import useApi from "../hooks/useApi";
 
 export default () => {
+    const registerUserApi = (data) => {
+        useApi(AuthenticateServiceApi.register(data));
+    };
+    useEffect(() => {
+        // registerUser.request();
+        // registerUser.request();
+    }, []);
+
     const {
         handleSubmit,
         register,
@@ -9,13 +20,16 @@ export default () => {
     } = useForm();
 
     const onSubmit = (values) => {
-        alert(JSON.stringify(values));
-        console.log(values);
+        registerUserApi(values);
+        // alert(JSON.stringify(values));
     };
     return (
         <>
             <div className="h-screen bg-sky-200 flex items-center">
-                <div className="mx-auto  py-8 px-8 rounded-lg space-y-2 shadow-xl  bg-white min-w-[20%]">
+                {/* {registerUser.error && <p>{registerUser.error}</p>} */}
+                {/* {registerUser.data && <p>{registerUser.data}</p>} */}
+
+                <div className="mx-auto py-8 px-8 rounded-lg space-y-2 shadow-xl  bg-white min-w-[20%]">
                     <h2 className="text-black text-center font-medium text-2xl">
                         Registration form
                     </h2>
@@ -35,6 +49,9 @@ export default () => {
                                 type="text"
                                 className=""
                                 placeholder="Name"
+                                {...register("name", {
+                                    required: true,
+                                })}
                             />
                         </div>
                         <div>
@@ -48,6 +65,9 @@ export default () => {
                                 type="email"
                                 className="mt-1"
                                 placeholder="Email"
+                                {...register("email", {
+                                    required: true,
+                                })}
                             />
                         </div>
 
@@ -59,9 +79,11 @@ export default () => {
                                 Gender
                             </label>
                             <select
-                                name="gender"
                                 id="gender"
                                 className="w-full rounded-md py-1 focus:border-indigo-500"
+                                {...register("gender", {
+                                    required: true,
+                                })}
                             >
                                 <option value="">Select</option>
                                 <option value="m">Male</option>
