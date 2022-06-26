@@ -89,12 +89,9 @@ export default () => {
                                 Gender
                             </label>
                             <select
-<<<<<<< HEAD
-=======
                                 {...register("gender", {
                                     required: true,
                                 })}
->>>>>>> 9d27aeececf2ddd222e3af83c13a8ec46355a8e4
                                 id="gender"
                                 className="w-full rounded-md py-1 focus:border-indigo-500"
                                 {...register("gender", {

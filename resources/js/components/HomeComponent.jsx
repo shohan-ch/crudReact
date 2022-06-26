@@ -22,17 +22,17 @@ const HomeComponent = () => {
                     </div>
                 </div>
             </div>
-
-            <div class="flex items-center justify-center h-full">
+            {/* 
+            <div className="flex items-center justify-center h-full">
                 <button
-                    class="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700"
+                    className="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700"
                     onClick={toggleModal}
                 >
                     Show Modal
                 </button>
             </div>
-            <div
-                class="fixed z-10 overflow-y-auto top-0 w-full left-0 hidden"
+           <div
+                className="fixed z-10 overflow-y-auto top-0 w-full left-0 hidden"
                 id="modal"
             >
                 <div class="flex items-center justify-center min-height-100vh pt-4 px-4 pb-20 text-center sm:block sm:p-0">
@@ -77,7 +77,7 @@ const HomeComponent = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };
