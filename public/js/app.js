@@ -2229,7 +2229,11 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   register: function register(body) {
-    return _Client__WEBPACK_IMPORTED_MODULE_0__["default"].get("/register", body);
+    console.log("api", body);
+    return _Client__WEBPACK_IMPORTED_MODULE_0__["default"].post("/register", body);
+  },
+  jsonData: function jsonData() {
+    return axios.get("https://jsonplaceholder.typicode.com/users");
   },
   "delete": function _delete() {
     return alert(body);
@@ -2396,7 +2400,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (apiFunc) {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState2 = _slicedToArray(_useState, 2),
       data = _useState2[0],
       setData = _useState2[1];
@@ -2408,33 +2412,48 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
   var request = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-      var result;
+      var _len,
+          args,
+          _key,
+          result,
+          _args = arguments;
+
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.prev = 0;
-              _context.next = 3;
-              return apiFunc;
 
-            case 3:
+              for (_len = _args.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+                args[_key] = _args[_key];
+              }
+
+              console.log("restParam", args);
+              _context.next = 5;
+              return apiFunc.apply(void 0, args);
+
+            case 5:
               result = _context.sent;
-              setData(result.data.data); // console.log(result.data.data)
+              console.log("UseApi", result.data); // setData(result.data.data);
+              // console.log(result)
 
-              _context.next = 10;
+              setData(result.data); // console.log(result.data.data)
+
+              _context.next = 13;
               break;
 
-            case 7:
-              _context.prev = 7;
+            case 10:
+              _context.prev = 10;
               _context.t0 = _context["catch"](0);
+              // setError(e)
               console.log(_context.t0);
 
-            case 10:
+            case 13:
             case "end":
               return _context.stop();
           }
         }
-      }, _callee, null, [[0, 7]]);
+      }, _callee, null, [[0, 10]]);
     }));
 
     return function request() {
@@ -2540,11 +2559,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
-  var registerUserApi = function registerUserApi(data) {
-    (0,_hooks_useApi__WEBPACK_IMPORTED_MODULE_2__["default"])(_api_AuthenticateServiceApi__WEBPACK_IMPORTED_MODULE_1__["default"].register(data));
-  };
-
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {// registerUser.request();
+  var registerUserApi = (0,_hooks_useApi__WEBPACK_IMPORTED_MODULE_2__["default"])(_api_AuthenticateServiceApi__WEBPACK_IMPORTED_MODULE_1__["default"].register);
+  var jsonApi = (0,_hooks_useApi__WEBPACK_IMPORTED_MODULE_2__["default"])(_api_AuthenticateServiceApi__WEBPACK_IMPORTED_MODULE_1__["default"].jsonData);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    jsonApi.request(); // registerUser.request();
     // registerUser.request();
   }, []);
 
@@ -2554,7 +2572,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       errors = _useForm.formState.errors;
 
   var onSubmit = function onSubmit(values) {
-    registerUserApi(values); // alert(JSON.stringify(values));
+    registerUserApi.request(values); // useApi(AuthenticateServiceApi.register(values));
+    // registerUserApi(values);
+    // alert(JSON.stringify(values));
   };
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
