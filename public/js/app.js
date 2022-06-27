@@ -2229,7 +2229,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   register: function register(body) {
-    console.log("api", body);
+    //    console.log("api",body);
     return _Client__WEBPACK_IMPORTED_MODULE_0__["default"].post("/register", body);
   },
   jsonData: function jsonData() {
@@ -2412,48 +2412,36 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
   var request = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-      var _len,
-          args,
-          _key,
-          result,
+      var result,
           _args = arguments;
-
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.prev = 0;
+              _context.next = 3;
+              return apiFunc.apply(void 0, _args);
 
-              for (_len = _args.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-                args[_key] = _args[_key];
-              }
-
-              console.log("restParam", args);
-              _context.next = 5;
-              return apiFunc.apply(void 0, args);
-
-            case 5:
+            case 3:
               result = _context.sent;
-              console.log("UseApi", result.data); // setData(result.data.data);
-              // console.log(result)
+              console.log(result); //    console.log("fromHook",result.data.message)
 
-              setData(result.data); // console.log(result.data.data)
-
-              _context.next = 13;
+              setData(result.data.message || result.data);
+              _context.next = 12;
               break;
 
-            case 10:
-              _context.prev = 10;
+            case 8:
+              _context.prev = 8;
               _context.t0 = _context["catch"](0);
-              // setError(e)
               console.log(_context.t0);
+              setError(_context.t0.response);
 
-            case 13:
+            case 12:
             case "end":
               return _context.stop();
           }
         }
-      }, _callee, null, [[0, 10]]);
+      }, _callee, null, [[0, 8]]);
     }));
 
     return function request() {
@@ -2461,7 +2449,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     };
   }();
 
-  console.log("State", data);
   return {
     data: data,
     error: error,
@@ -2560,10 +2547,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
   var registerUserApi = (0,_hooks_useApi__WEBPACK_IMPORTED_MODULE_2__["default"])(_api_AuthenticateServiceApi__WEBPACK_IMPORTED_MODULE_1__["default"].register);
-  var jsonApi = (0,_hooks_useApi__WEBPACK_IMPORTED_MODULE_2__["default"])(_api_AuthenticateServiceApi__WEBPACK_IMPORTED_MODULE_1__["default"].jsonData);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    jsonApi.request(); // registerUser.request();
-    // registerUser.request();
+  var getUserApi = (0,_hooks_useApi__WEBPACK_IMPORTED_MODULE_2__["default"])(_api_AuthenticateServiceApi__WEBPACK_IMPORTED_MODULE_1__["default"].jsonData); // const jsonApi = useApi(AuthenticateServiceApi.jsonData);
+
+  console.log("From Register", registerUserApi.data);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {// getUserApi.request();
   }, []);
 
   var _useForm = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_4__.useForm)(),
@@ -2572,15 +2559,21 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       errors = _useForm.formState.errors;
 
   var onSubmit = function onSubmit(values) {
-    registerUserApi.request(values); // useApi(AuthenticateServiceApi.register(values));
-    // registerUserApi(values);
-    // alert(JSON.stringify(values));
+    registerUserApi.request(values);
   };
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
       className: "h-screen bg-sky-200 flex items-center",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      children: [registerUserApi.data.length > 0 && registerUserApi.data.map(function (user, index) {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+          children: user
+        }, index);
+      }), getUserApi.data.length > 0 && getUserApi.data.map(function (user, index) {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
+          children: [user.name, " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {})]
+        }, index);
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
         className: "mx-auto py-8 px-8 rounded-lg space-y-2 shadow-xl  bg-white min-w-[20%]",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
           className: "text-black text-center font-medium text-2xl",
@@ -2659,7 +2652,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             children: "Register"
           })]
         })]
-      })
+      })]
     })
   });
 });

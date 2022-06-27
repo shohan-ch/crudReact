@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/register', function (Request $request) {
-
-    return response()->json(["data" => $request->all()], 200);
+    // $data = [1, 2, 3];
+    return response()->json(["message" => $request->all()], 200);
 });
 
 

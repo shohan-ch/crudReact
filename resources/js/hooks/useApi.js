@@ -1,39 +1,37 @@
-import { useState } from "react"
+import { useState } from 'react';
 
 export default (apiFunc)=>{
 
-
-const [data, setData]   = useState([]);
-const [error, setError] = useState("")
-
+    const [data,setData] = useState([]);
+    const [error,setError] = useState("");
 
 
-const request = async(...args)=>{
+    const request = async (...args)=>{
+        try{
+           const result = await apiFunc(...args);
+           console.log(result);
+        //    console.log("fromHook",result.data.message)
+           setData(result.data.message||result.data) 
 
-    try{
-        console.log("restParam",args);
-        const result = await apiFunc(...args);
-        console.log("UseApi",result.data)
-        // setData(result.data.data);
+        }catch(e){
+            console.log(e)
+            setError(e.response)
+        }
 
-        // console.log(result)
-
-        setData(result.data)
-        // console.log(result.data.data)
-    }catch(e){
-        // setError(e)
-        console.log(e)
     }
-}
-
-console.log("State", data)
 
     return {
         data, 
         error,
         request
-
     }
+
+
+
+
+
+
+
 
 
 

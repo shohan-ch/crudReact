@@ -6,12 +6,11 @@ import useApi from "../hooks/useApi";
 
 export default () => {
     const registerUserApi = useApi(AuthenticateServiceApi.register);
-    const jsonApi = useApi(AuthenticateServiceApi.jsonData);
-
+    const getUserApi = useApi(AuthenticateServiceApi.jsonData);
+    // const jsonApi = useApi(AuthenticateServiceApi.jsonData);
+    console.log("From Register", registerUserApi.data);
     useEffect(() => {
-        jsonApi.request();
-        // registerUser.request();
-        // registerUser.request();
+        // getUserApi.request();
     }, []);
 
     const {
@@ -22,15 +21,23 @@ export default () => {
 
     const onSubmit = (values) => {
         registerUserApi.request(values);
-        // useApi(AuthenticateServiceApi.register(values));
-        // registerUserApi(values);
-        // alert(JSON.stringify(values));
     };
     return (
         <>
             <div className="h-screen bg-sky-200 flex items-center">
                 {/* {registerUser.error && <p>{registerUser.error}</p>} */}
-                {/* {registerUserApi.data && <p>{registerUserApi.data}</p>} */}
+
+                {registerUserApi.data.length > 0 &&
+                    registerUserApi.data.map((user, index) => (
+                        <p key={index}>{user}</p>
+                    ))}
+
+                {getUserApi.data.length > 0 &&
+                    getUserApi.data.map((user, index) => (
+                        <p key={index}>
+                            {user.name} <br></br>
+                        </p>
+                    ))}
 
                 <div className="mx-auto py-8 px-8 rounded-lg space-y-2 shadow-xl  bg-white min-w-[20%]">
                     <h2 className="text-black text-center font-medium text-2xl">
