@@ -5,6 +5,7 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
 import 'antd/dist/antd.css';
+import Ecommerce from "./pages/EcommerceHome";
 
 // const Main = () => {
     const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -15,6 +16,8 @@ import 'antd/dist/antd.css';
                 </Route>    
                 <Route path="contact" element={<Contact />} />  
                 <Route path="register" element={<Register />} />  
+                <Route path="ecommerce" element={<Ecommerce/>} />  
+
 
             </Routes>
             </BrowserRouter>)

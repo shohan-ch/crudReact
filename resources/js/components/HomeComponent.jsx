@@ -19,6 +19,9 @@ const HomeComponent = () => {
                         <Link to="contact" className="my-btn ">
                             Login
                         </Link>
+                        <Link to="ecommerce" className="my-btn">
+                            E-commerce Template
+                        </Link>
                     </div>
                 </div>
             </div>
