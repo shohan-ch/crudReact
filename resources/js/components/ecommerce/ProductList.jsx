@@ -1,9 +1,9 @@
 export default () => {
     const images = [
         ["/images/products/p-10.webp", "ON SALE"],
-        ["/images/products/p-10.webp"],
+        ["/images/products/p-2.webp"],
         ["/images/products/p-10.webp", "ON SALE"],
-        ["/images/products/p-10.webp"],
+        ["/images/products/p-2.webp"],
         ["/images/products/p-10.webp"],
     ];
 
@@ -22,7 +22,7 @@ export default () => {
                                         </p>
                                     )}
                                     <img
-                                        className="mx-auto hover:bg-red hover:scale-95 ease-in duration-150"
+                                        className="mx-auto hover:bg-red hover:scale-110 ease-in duration-150"
                                         src={image}
                                         alt="img"
                                     />

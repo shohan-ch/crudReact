@@ -2402,7 +2402,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
-  var images = [["/images/products/p-10.webp", "ON SALE"], ["/images/products/p-10.webp"], ["/images/products/p-10.webp", "ON SALE"], ["/images/products/p-10.webp"], ["/images/products/p-10.webp"]];
+  var images = [["/images/products/p-10.webp", "ON SALE"], ["/images/products/p-2.webp"], ["/images/products/p-10.webp", "ON SALE"], ["/images/products/p-2.webp"], ["/images/products/p-10.webp"]];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h3", {
       children: " Product Grids"
@@ -2425,7 +2425,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
                   className: "absolute bg-custom-green px-3 inline-block font-bold text-white rounded-full  z-50",
                   children: "ON SALE"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("img", {
-                  className: "mx-auto hover:bg-red hover:scale-95 ease-in duration-150",
+                  className: "mx-auto hover:bg-red hover:scale-110 ease-in duration-150",
                   src: image,
                   alt: "img"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", {
